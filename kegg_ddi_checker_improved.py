@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 KEGG Drug–Drug Interaction Checker (Streamlit App) - 改善版
-同一ファイル: kegg_ddi_checker_v1.9.py
 -----------------------------------------------------------
 日本語（ブランド名・一般名いずれも可）の医薬品名を入力すると、KEGG REST `/ddi` API を使って
 相互作用を検索し、結果を表形式で表示する簡易チェッカーです。
@@ -273,9 +272,9 @@ user_text = st.text_input(
 
 col1, col2 = st.columns([1, 5])
 with col1:
-    st.button("入力をクリア", type="secondary", on_click=clear_input)
+    st.button("クリア", type="secondary", on_click=clear_input)
 with col2:
-    strict_mode = st.checkbox("厳密モード（完全一致のみ）", value=False)
+    strict_mode = st.checkbox("厳密モード（完全一致のみ）", value=True)
 
 # 入力なしなら終了
 if not user_text.strip():
